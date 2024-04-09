@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+
 /**
 * binary_tree_leaves - function that prints the total number of leaves
 * @tree: pointer to the root of the binary tree
@@ -31,7 +32,7 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 * Return: balance factor of the binary tree
 */
 
-size_t binary_tree_height(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree);
 {
 	size_t height_left, height_right;
 
@@ -53,7 +54,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (height_right + 1);
 	}
 }
-
+*/
 /**
 * binary_tree_is_perfect - function that checks if a binary tree is perfect
 * @tree: pointer to the binary tree to check
