@@ -59,17 +59,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
 * @tree: pointer to the binary tree to check
 * Return: 1 if perfect, 0 if not
 */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	/*size_t depth;*/
 	size_t height, leaves, isperfect;
 
 	if (tree == NULL)
 		return (0);
-
-	/*depth = binary_tree_depth(tree);
-	printf("depth = %zu\n", depth);
-	return (depth);*/
 
 	height = binary_tree_height(tree);
 	leaves = binary_tree_leaves(tree);
