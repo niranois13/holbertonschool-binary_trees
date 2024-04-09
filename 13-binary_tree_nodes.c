@@ -12,8 +12,9 @@ size_t binary_tree_leaves(const binary_tree_t *tree);
 */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
-	int number_nodes = 0;
-	int number_leaves = 0;
+	int number_nodes;
+	int number_leaves;
+	int internal_nodes;
 
 	if (tree == NULL)
 		return (0);
@@ -21,7 +22,9 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 	number_nodes = binary_tree_size(tree);
 	number_leaves = binary_tree_leaves(tree);
 
-	return (number_nodes - number_leaves)
+	internal_nodes = number_nodes - number_leaves;
+
+	return (internal_nodes);
 }
 
 /**
@@ -34,6 +37,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 {
 	int count_left = 0;
 	int count_right = 0;
+	int count_total;
 
 	if (tree == NULL)
 	{
@@ -45,7 +49,9 @@ size_t binary_tree_size(const binary_tree_t *tree)
 		count_right = binary_tree_size(tree->right);
 	}
 
-	return ((count_left + count_right) + 1);
+	count_total = (count_left + count_right) + 1;
+
+	return (count_total);
 }
 
 /**
